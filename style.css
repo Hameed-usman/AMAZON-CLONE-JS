@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #232f3e;
+    padding: 12px 30px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-country {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 13px;
+    color: #c4c4c4;
+    cursor: pointer;
+}
+
+.nav-country h1 {
+    color: white;
+    font-size: 14px;
+}
+
+.nav-country img {
+    margin-right: 8px;
+}
+
+/* NAV SEARCH STYLING  */
+.nav-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    margin-left: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-search:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-search-category {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #e5e5e5;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-search-category:hover {
+    background-color: #d5d5d5;
+}
+
+.nav-search-category p {
+    font-weight: 600;
+}
+
+.nav-search-input {
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.nav-search-icon {
+    width: 45px;
+    padding: 8px;
+    background-color: #ffd64f;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-search-icon:hover {
+    background-color: #f3c23e;
+}
+
+.nav-language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-language img {
+    margin-right: 5px;
+}
+
+.nav-language p {
+    font-weight: 600;
+    font-size: 13px;
+    color: #c4c4c4;
+}
+
+.nav-language:hover p {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-text {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-text p {
+    font-size: 10px;
+    color: #c4c4c4;
+}
+
+.nav-text h1 {
+    font-size: 14px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-text:hover h1 {
+    color: #ffd64f;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 25px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-cart:hover {
+    transform: scale(1.05);
+}
+
+.nav-cart img {
+    transition: filter 0.3s ease;
+}
+
+.nav-cart:hover img {
+    filter: brightness(1.2);
+}
+
+.nav-cart h4 {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* NAV STYLING END  */
+
+.nav-bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 20px;
+    background-color: #232f3e;
+    color: #fff;
+    font-size: 15px;
+}
+
+.nav-bottom div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width: 480px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        height: auto;
+    }
+
+    .nav-amazon-logo {
+        width: 80px; /* Slightly smaller logo */
+        margin-bottom: 10px; /* Space around logo */
+    }
+
+    /* Hide the country delivery option on mobile */
+    .nav-country {
+        display: none;
+    }
+
+    /* Adjust search bar for mobile */
+    .nav-search {
+        display: flex;
+        align-items: center;
+        width: 100%; /* Full width search bar */
+        margin-top: 10px;
+    }
+
+    .nav-search-input {
+        flex-grow: 1;
+        font-size: 14px; /* Adjust input font size */
+        padding: 8px;
+        border-radius: 4px 0 0 4px;
+    }
+
+    .nav-search-category {
+        display: none; /* Hide category on mobile */
+    }
+
+    .nav-search-icon {
+        width: 40px;
+        padding: 6px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    /* Hide language option on mobile */
+    .nav-language {
+        display: none;
+    }
+
+    /* Hide account, orders, etc. text for mobile */
+    .nav-text {
+        display: none;
+    }
+
+    /* Adjust cart for mobile */
+    .nav-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        position: relative;
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .nav-cart img {
+        width: 30px; /* Make cart icon smaller */
+        position: relative;
+        bottom: 69px;
+        left: 182px;
+    }
+
+    .nav-cart h4 {
+        font-size: 12px; /* Smaller cart text */
+    }
+
+    /* Adjust bottom navigation bar for mobile */
+    .nav-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #232f3e; /* Add a subtle background color */
+        height: 30px;
+    }
+
+    .nav-bottom div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-bottom div p {
+        font-size: 12px;
+        margin: 5px 10px;
+    }
+
+    #nav-bottom-p6 {
+        visibility: hidden;
+    } 
+
+    .nav-menu-img {
+        width: 20px; /* Smaller menu icon */
+    }
+
+    /* General font size adjustments */
+    .nav-country h1,
+    .nav-language p,
+    .nav-text p {
+      font-size: 11px;
+    }
+
+    /* Hide less important elements for better mobile experience */
+    .nav-country h1,
+    .nav-language img {
+        display: none;
+    }
+}
+
+
+/* IMAGE SLIDER  */
+
